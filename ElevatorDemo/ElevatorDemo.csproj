@@ -53,6 +53,8 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Elevator.cs" />
+    <Compile Include="ElevatorBattery.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
