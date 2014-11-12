@@ -8,10 +8,11 @@
     public int NumberPersonCarried { get; set; }
     public bool IsFull { get; set; }
     public int Position { get; set; }
-    public int MovingDirection { get; set; }  
+    public ElevatorMovingDirection MovingDirection { get; set; }  
 
 
-    public Elevator(int personCapacity = 1, bool isWorking = true, bool isMoving = false, int numberOfPersonCarried = 0, bool isFull = false, int position = 0)
+    public Elevator(int personCapacity = 1, bool isWorking = true, bool isMoving = false, int numberOfPersonCarried = 0, bool isFull = false, 
+      int position = 0, ElevatorMovingDirection movingDirection = ElevatorMovingDirection.NotMoving)
     {
       PersonCapacity = personCapacity;
       IsWorking = isWorking;
@@ -19,6 +20,7 @@
       NumberPersonCarried = numberOfPersonCarried;
       IsFull = isFull;
       Position = position; // what floor the elevator is at?
+      MovingDirection = movingDirection;
     }
 
   }
