@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ElevatorDemo.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FRMenuFichier" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Fichier</Value>
+    </Setting>
+    <Setting Name="USMenuFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">File</Value>
+    </Setting>
+    <Setting Name="FRMenuQuitter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Quitter</Value>
+    </Setting>
+    <Setting Name="USMenuQuit" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Quit</Value>
+    </Setting>
+    <Setting Name="FRMenuLangage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Langage</Value>
+    </Setting>
+    <Setting Name="USMenuLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Language</Value>
+    </Setting>
+    <Setting Name="FRMenuFrancais" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Français</Value>
+    </Setting>
+    <Setting Name="USMenuFrench" Type="System.String" Scope="User">
+      <Value Profile="(Default)">French</Value>
+    </Setting>
+    <Setting Name="FRMenuAnglais" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Anglais</Value>
+    </Setting>
+    <Setting Name="USMenuEnglish" Type="System.String" Scope="User">
+      <Value Profile="(Default)">English</Value>
+    </Setting>
+    <Setting Name="FRMenuOutils" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Outils</Value>
+    </Setting>
+    <Setting Name="USMenuTools" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Tools</Value>
+    </Setting>
+    <Setting Name="FRMenuOptions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Options</Value>
+    </Setting>
+    <Setting Name="USMenuOptions" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Options</Value>
+    </Setting>
+    <Setting Name="FRMenuAide" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Aide</Value>
+    </Setting>
+    <Setting Name="USMenuHelp" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Help</Value>
+    </Setting>
+    <Setting Name="FRMenuAPropos" Type="System.String" Scope="User">
+      <Value Profile="(Default)">A propos de ...</Value>
+    </Setting>
+    <Setting Name="USMenuAbout" Type="System.String" Scope="User">
+      <Value Profile="(Default)">About ...</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
