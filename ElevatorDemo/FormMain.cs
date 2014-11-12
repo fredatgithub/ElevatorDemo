@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Reflection;
 using System.Windows.Forms;
+using ElevatorDemo.Properties;
 
 namespace ElevatorDemo
 {
@@ -17,7 +20,8 @@ namespace ElevatorDemo
 
     private void FormMain_Load(object sender, EventArgs e)
     {
-
+      DisplayTitle();
+      GetWindowValue();
     }
 
     private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -28,36 +32,71 @@ namespace ElevatorDemo
 
     private void toFrenchToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      fileToolStripMenuItem.Text = Properties.Settings.Default.FRMenuFichier;
-      quitToolStripMenuItem.Text = Properties.Settings.Default.FRMenuQuitter;
+      fileToolStripMenuItem.Text = Settings.Default.FRMenuFichier;
+      quitToolStripMenuItem.Text = Settings.Default.FRMenuQuitter;
 
-      languageToolStripMenuItem.Text = Properties.Settings.Default.FRMenuLangage;
-      toFrenchToolStripMenuItem.Text = Properties.Settings.Default.FRMenuFrancais;
-      toEnglishToolStripMenuItem.Text = Properties.Settings.Default.FRMenuAnglais;
+      languageToolStripMenuItem.Text = Settings.Default.FRMenuLangage;
+      toFrenchToolStripMenuItem.Text = Settings.Default.FRMenuFrancais;
+      toEnglishToolStripMenuItem.Text = Settings.Default.FRMenuAnglais;
 
-      toolsToolStripMenuItem.Text = Properties.Settings.Default.FRMenuOutils;
-      optionsToolStripMenuItem.Text = Properties.Settings.Default.FRMenuOptions;
+      toolsToolStripMenuItem.Text = Settings.Default.FRMenuOutils;
+      optionsToolStripMenuItem.Text = Settings.Default.FRMenuOptions;
 
-      helpToolStripMenuItem.Text = Properties.Settings.Default.FRMenuAide;
-      aboutToolStripMenuItem.Text = Properties.Settings.Default.FRMenuAPropos;
+      helpToolStripMenuItem.Text = Settings.Default.FRMenuAide;
+      aboutToolStripMenuItem.Text = Settings.Default.FRMenuAPropos;
     }
 
     private void toEnglishToolStripMenuItem_Click(object sender, EventArgs e)
     {
-      fileToolStripMenuItem.Text = Properties.Settings.Default.USMenuFile;
-      quitToolStripMenuItem.Text = Properties.Settings.Default.USMenuQuit;
+      fileToolStripMenuItem.Text = Settings.Default.USMenuFile;
+      quitToolStripMenuItem.Text = Settings.Default.USMenuQuit;
 
-      languageToolStripMenuItem.Text = Properties.Settings.Default.USMenuLanguage;
-      toFrenchToolStripMenuItem.Text = Properties.Settings.Default.USMenuFrench;
-      toEnglishToolStripMenuItem.Text = Properties.Settings.Default.USMenuEnglish;
-
-
-      toolsToolStripMenuItem.Text = Properties.Settings.Default.USMenuTools;
-      optionsToolStripMenuItem.Text = Properties.Settings.Default.USMenuOptions;
+      languageToolStripMenuItem.Text = Settings.Default.USMenuLanguage;
+      toFrenchToolStripMenuItem.Text = Settings.Default.USMenuFrench;
+      toEnglishToolStripMenuItem.Text = Settings.Default.USMenuEnglish;
 
 
-      helpToolStripMenuItem.Text = Properties.Settings.Default.USMenuHelp;
-      aboutToolStripMenuItem.Text = Properties.Settings.Default.USMenuAbout;
+      toolsToolStripMenuItem.Text = Settings.Default.USMenuTools;
+      optionsToolStripMenuItem.Text = Settings.Default.USMenuOptions;
+
+
+      helpToolStripMenuItem.Text = Settings.Default.USMenuHelp;
+      aboutToolStripMenuItem.Text = Settings.Default.USMenuAbout;
     }
+
+    private void DisplayTitle()
+    {
+      Assembly assembly = Assembly.GetExecutingAssembly();
+      FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+      Text += string.Format(" V{0}.{1}.{2}.{3}", fvi.FileMajorPart, fvi.FileMinorPart, fvi.FileBuildPart, fvi.FilePrivatePart);
+    }
+
+    private void GetWindowValue()
+    {
+      // Set this if you want a minimum width
+      //Width = Settings.Default.WindowWidth < 395 ? 395 : Settings.Default.WindowWidth;
+      Width = Settings.Default.WindowWidth;
+      // Set this if you want a minimum Height
+      // Height = Settings.Default.WindowHeight < 180 ? 180 : Settings.Default.WindowHeight;
+      Height = Settings.Default.WindowHeight;
+      Top = Settings.Default.WindowTop < 0 ? 0 : Settings.Default.WindowTop;
+      Left = Settings.Default.WindowLeft < 0 ? 0 : Settings.Default.WindowLeft;
+    }
+
+    private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+    {
+      SaveWindowValue();
+    }
+
+    private void SaveWindowValue()
+    {
+      Settings.Default.WindowHeight = Height;
+      Settings.Default.WindowWidth = Width;
+      Settings.Default.WindowLeft = Left;
+      Settings.Default.WindowTop = Top;
+      Settings.Default.Save();
+    }
+
+
   }
 }
