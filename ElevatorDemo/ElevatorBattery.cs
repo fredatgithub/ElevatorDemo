@@ -3,6 +3,5 @@
   class ElevatorBattery
   {
     public int NumberOfElevator { get; set; }
-
   }
 }

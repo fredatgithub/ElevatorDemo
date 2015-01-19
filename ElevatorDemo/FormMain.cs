@@ -96,7 +96,5 @@ namespace ElevatorDemo
       Settings.Default.WindowTop = Top;
       Settings.Default.Save();
     }
-
-
   }
 }

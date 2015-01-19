@@ -56,6 +56,7 @@
     <Compile Include="Elevator.cs" />
     <Compile Include="ElevatorBattery.cs" />
     <Compile Include="ElevatorMovingDirection.cs" />
+    <Compile Include="ElevatorStrategy.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
