@@ -10,10 +10,11 @@
     public int Position { get; set; }
     public ElevatorMovingDirection MovingDirection { get; set; }
     public decimal Mileage { get; set; }
+    public byte IsAtFloorNumber { get; set; }
     
 
     public Elevator(int personCapacity = 1, bool isWorking = true, bool isMoving = false, int numberOfPersonCarried = 0, bool isFull = false, 
-      int position = 0, ElevatorMovingDirection movingDirection = ElevatorMovingDirection.NotMoving)
+      int position = 0, ElevatorMovingDirection movingDirection = ElevatorMovingDirection.NotMoving, byte isAtFloorNumber = 0)
     {
       PersonCapacity = personCapacity;
       IsWorking = isWorking;
@@ -23,6 +24,7 @@
       Position = position; // what floor the elevator is at?
       MovingDirection = movingDirection;
       Mileage = 0;
+      IsAtFloorNumber = isAtFloorNumber;
     }
 
   }
