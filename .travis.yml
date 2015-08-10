@@ -1,0 +1,8 @@
+language: csharp
+solution: ElevatorDemo.sln
+
+script:
+  - xbuild /p:Configuration=Release ElevatorDemo/ElevatorDemo.csproj
+
+notifications:
+  email: false
